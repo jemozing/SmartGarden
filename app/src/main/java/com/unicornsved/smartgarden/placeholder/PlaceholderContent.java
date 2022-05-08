@@ -38,7 +38,7 @@ public class PlaceholderContent {
      */
     public static final Map<String, Flower> ITEM_MAP = new HashMap<String, Flower>();
 
-    private static final int COUNT = 25;
+    private static final int COUNT = 10;
 
     static {
         // Add some sample items.
@@ -53,7 +53,7 @@ public class PlaceholderContent {
     }
 
     private static Flower createPlaceholderItem(int position) {
-        return new Flower(flowerName[new Random().nextInt(flowerName.length)], "Item " + position, "04.04", new Random().nextInt(100), new Random().nextInt(100), new Random().nextInt(36), position);
+        return new Flower(flowerName[new Random().nextInt(flowerName.length)], "Place " + position, "04.04", "Sensor: " + position,new Random().nextInt(100), new Random().nextInt(100), new Random().nextInt(36), position);
     }
 
     private static String makeDetails(int position) {
@@ -72,7 +72,7 @@ public class PlaceholderContent {
         private int sun;
         private int humidity;
         private int temp;
-        public final String name, date, place;
+        public final String name, date, place, sensor;
         private final static int IMAGE_FLOWER[] = {
                 R.drawable.bush,
                 R.drawable.cactus,
@@ -93,15 +93,16 @@ public class PlaceholderContent {
         public int FlowIm;
         private int position;
 
-        public Flower(String name, String place, String date, int sun, int humidity) {
+        public Flower(String name, String place, String date, int sun, int humidity, String sensor) {
             this.sun = sun;
             this.humidity = humidity;
             this.name = name;
             this.date = date;
             this.place = place;
+            this.sensor = sensor;
         }
 
-        public Flower(String name, String place, String date, int sun, int humidity, int temp, int position) {
+        public Flower(String name, String place, String date, String sensor, int sun, int humidity, int temp, int position) {
             this.sun = sun;
             this.humidity = humidity;
             this.name = name;
@@ -109,6 +110,7 @@ public class PlaceholderContent {
             this.place = place;
             this.position = position;
             this.temp = temp;
+            this.sensor = sensor;
         }
 
         public int randomImageFlower(){

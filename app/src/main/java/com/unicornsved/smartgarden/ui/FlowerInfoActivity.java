@@ -24,8 +24,9 @@ public class FlowerInfoActivity extends AppCompatActivity {
             ((ImageView) findViewById(R.id.imageFlower)).setImageResource(PlaceholderContent.ITEMS.get(flowerPosition).FlowIm);
             ((TextView) findViewById(R.id.flowerName)).setText(PlaceholderContent.ITEMS.get(flowerPosition).name);
             ((TextView) findViewById(R.id.flowerPlace)).setText(PlaceholderContent.ITEMS.get(flowerPosition).place);
+            ((TextView) findViewById(R.id.flowerSensor)).setText(PlaceholderContent.ITEMS.get(flowerPosition).sensor);
             ((TextView) findViewById(R.id.flowerHumidity)).setText(PlaceholderContent.ITEMS.get(flowerPosition).getHumidity() + " %");
-            ((TextView) findViewById(R.id.flowerTemp)).setText(PlaceholderContent.ITEMS.get(flowerPosition).getTemp()+ " %");
+            ((TextView) findViewById(R.id.flowerTemp)).setText(PlaceholderContent.ITEMS.get(flowerPosition).getTemp()+ " C");
             ((TextView) findViewById(R.id.flowerSun)).setText(PlaceholderContent.ITEMS.get(flowerPosition).getSun() + " %");
 
         }

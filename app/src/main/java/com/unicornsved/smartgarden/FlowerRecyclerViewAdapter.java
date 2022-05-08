@@ -1,6 +1,7 @@
 package com.unicornsved.smartgarden;
 
 import android.content.Intent;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -41,11 +42,8 @@ public class FlowerRecyclerViewAdapter extends RecyclerView.Adapter<FlowerRecycl
         holder.mIdView.setText(mValues.get(position).name);
         holder.mContentView.setText(Integer.toString(mValues.get(position).getHumidity())+"%");
         holder.mImageFlower.setImageResource(mValues.get(position).randomImageFlower());
-        holder.mImageFlower.setScaleX(1.5F);
-        holder.mImageFlower.setScaleY(1.5F);
-        holder.mImageHumidity.setImageResource(Flower.IMAGE_HUM);
-        holder.mImageFlower.setScaleX(0.4F);
-        holder.mImageFlower.setScaleY(0.4F);
+        holder.mTempView.setText(mValues.get(position).getTemp() + "C");
+        holder.mSunView.setText(mValues.get(position).getSun()+"%");
     }
 
     @Override
@@ -55,19 +53,20 @@ public class FlowerRecyclerViewAdapter extends RecyclerView.Adapter<FlowerRecycl
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         public final TextView mIdView;
-        public final TextView mContentView;
-        public final ImageView mImageFlower, mImageHumidity;
+        public final TextView mContentView, mTempView, mSunView;
+        public final ImageView mImageFlower;
         public Flower mItem;
-        final LinearLayout listDevice;
+        final ConstraintLayout listDevice;
 
         public ViewHolder(FragmentItemBinding binding) {
             super(binding.getRoot());
             mIdView = binding.name;
             mContentView = binding.place;
             mImageFlower = binding.imageFlower;
-            mImageHumidity = binding.imageHumidity;
             listDevice = binding.linLay;
             listDevice.setOnClickListener(this);
+            this.mTempView = binding.temp;
+            this.mSunView = binding.sun;
         }
 
         @Override

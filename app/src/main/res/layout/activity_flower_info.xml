@@ -19,11 +19,12 @@
 
     <TextView
         android:id="@+id/flowerName"
-        android:layout_width="163dp"
-        android:layout_height="24dp"
+        android:layout_width="184dp"
+        android:layout_height="38dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="24dp"
         android:text="TextView"
+        android:textSize="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.041"
         app:layout_constraintStart_toEndOf="@+id/imageFlower"
@@ -54,23 +55,27 @@
 
     <TextView
         android:id="@+id/flowerHumidity"
-        android:layout_width="256dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="120dp"
+        android:layout_width="169dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="124dp"
         android:text="TextView"
+        android:textAlignment="viewEnd"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.116"
+        app:layout_constraintHorizontal_bias="0.186"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/flowerPlace" />
 
     <TextView
         android:id="@+id/flowerTemp"
-        android:layout_width="256dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="204dp"
+        android:layout_width="169dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="200dp"
         android:text="TextView"
+        android:textAlignment="textEnd"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.116"
+        app:layout_constraintHorizontal_bias="0.186"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/flowerPlace" />
 
@@ -78,21 +83,24 @@
         android:id="@+id/imageTemp"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.39"
         app:layout_constraintStart_toEndOf="@+id/flowerTemp"
         app:layout_constraintTop_toBottomOf="@+id/imageHubinity"
         app:srcCompat="@drawable/temperature" />
 
     <TextView
         android:id="@+id/flowerSun"
-        android:layout_width="256dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="292dp"
+        android:layout_width="170dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="272dp"
         android:text="TextView"
+        android:textAlignment="textEnd"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.116"
+        app:layout_constraintHorizontal_bias="0.186"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/flowerPlace" />
 
@@ -100,9 +108,10 @@
         android:id="@+id/imageSun"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="32dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.384"
         app:layout_constraintStart_toEndOf="@+id/flowerSun"
         app:layout_constraintTop_toBottomOf="@+id/imageTemp"
         app:srcCompat="@drawable/sun" />
@@ -111,7 +120,7 @@
         android:id="@+id/imageHubinity"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginTop="220dp"
+        android:layout_marginTop="236dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.298"
         app:layout_constraintStart_toEndOf="@+id/flowerHumidity"

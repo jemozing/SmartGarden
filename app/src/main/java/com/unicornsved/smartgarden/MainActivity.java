@@ -1,5 +1,6 @@
 package com.unicornsved.smartgarden;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.internal.BottomNavigationMenuView;
 import android.support.design.widget.BottomNavigationView;
@@ -15,6 +16,8 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.unicornsved.smartgarden.databinding.ActivityMainBinding;
+import com.unicornsved.smartgarden.placeholder.PlaceholderContent;
+import com.unicornsved.smartgarden.ui.FlowerInfoActivity;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -52,6 +55,11 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
+
+        binding.addButton.setOnClickListener(v -> {
+            Intent intent = new Intent(this, AddActivity.class);
+            startActivity(intent);
+        });
     }
 
 }
